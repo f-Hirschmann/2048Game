@@ -1,0 +1,11 @@
+name: SPW Exercise 3 Task 3
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    steps:
+      name: Build Project
+      run: mvn compile
+      working-directory: ./src
