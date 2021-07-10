@@ -6,6 +6,6 @@ on:
 jobs:
   build:
     steps:
-      name: Build Project
+    - name: Build Project
       run: mvn compile
       working-directory: ./src
