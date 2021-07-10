@@ -43,7 +43,7 @@ jobs:
         
   deployment:
     runs-on: self-hosted
-    needs: test
+    needs: package
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
