@@ -17,6 +17,7 @@ jobs:
         
   test:
     runs-on: self-hosted
+    needs: build
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -29,6 +30,7 @@ jobs:
 
   package:
     runs-on: self-hosted
+    needs: test
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -41,6 +43,7 @@ jobs:
         
   deployment:
     runs-on: self-hosted
+    needs: package
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
